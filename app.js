@@ -1,4 +1,4 @@
-function updateProductCart(products, isAdd) {
+function updateProductCart(products, prices, isAdd) {
     const productInput = document.getElementById(products + '-number');
     let inputUpdate = productInput.value;
 
@@ -8,6 +8,7 @@ function updateProductCart(products, isAdd) {
         inputUpdate = parseInt(inputUpdate) - 1;
     }
     productInput.value = inputUpdate;
-
+    const getPrice = document.getElementById(products + '-total');
+    getPrice.innerText = inputUpdate * prices
 
 }
